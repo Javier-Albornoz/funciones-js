@@ -28,6 +28,7 @@ let pgcM = pgcMujeres(IMC,edad);
 switch (menu) {
     case 1:
         alert('Ahora con tu imc calcularemos tu pgc(porcentaje de grasa corporal)');
+        pgcMujeres(IMC,edad);
         alert(`Tu porcentaje de grasa corporal es: ${pgcM.toFixed(1)}`);
         break;
     case 2:
@@ -37,7 +38,7 @@ switch (menu) {
         break;   
 
     default:
-        alert('Esa opcion no exite')
+        alert('Esa opcion no existe')
         break;
 }
 
