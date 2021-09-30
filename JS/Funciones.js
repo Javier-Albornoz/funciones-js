@@ -19,8 +19,15 @@ alert('Para eso primero necesitamos calcular tu IMC(índice de masa corporal)');
 let menu = Number (prompt(`Ingresa el Nº de una de las siguientes opciones:
 1- Mujer
 2- Hombre`));
-let peso, altura, edad, IMC, pgcH, pgcM;
+while (menu >= 3 || menu < 1 || Number.isNaN(menu)) {
+    alert('Esa opcion no existe');
+    menu = Number (prompt(`Ingresa el Nº de una de las siguientes opciones:
+    1- Mujer
+    2- Hombre`));
+}
 
+
+let peso, altura, edad, IMC, pgcH, pgcM;
 switch (menu) {
     case 1:
         peso = Number(prompt('Ingresa tu peso en Kg(Kilogramos)'));
@@ -44,7 +51,7 @@ switch (menu) {
         break;   
 
     default:
-        alert('Esa opcion no existe')
+        
         break;
 }
 alert('Programa Finalizado :D')
